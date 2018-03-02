@@ -1,6 +1,6 @@
-[Checkstyle](https://github.com/checkstyle/checkstyle) is a development tool for Java, used to ensure that code standards are applied consistently. 
+[Checkstyle](https://github.com/checkstyle/checkstyle) is a development tool for Java, used to ensure that code standards are applied consistently.
 
-Checkstyle can be enabled in Java projects using Maven using the [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin) 
+Checkstyle can be enabled in Java projects using Maven using the [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin)
 
 ```xml
 <!-- Used to validate all code style rules in source code using Checkstyle -->
@@ -20,7 +20,7 @@ Checkstyle can be enabled in Java projects using Maven using the [Maven Checksty
     </executions>
     <configuration>
         <configLocation>https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle.xml</configLocation>
-        <suppressionsLocation>https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duracloud-checkstyle-suppressions.xml</suppressionsLocation>
+        <suppressionsLocation>https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle-suppressions.xml</suppressionsLocation>
         <encoding>UTF-8</encoding>
         <consoleOutput>true</consoleOutput>
         <logViolationsToConsole>true</logViolationsToConsole>
@@ -37,4 +37,3 @@ Checkstyle can be enabled in Java projects using Maven using the [Maven Checksty
     </dependencies>
 </plugin>
 ```
-
