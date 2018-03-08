@@ -22,6 +22,12 @@ For more information on CheckStyle configurations below, see: http://checkstyle.
     <!-- Configure checker to run on files with these extensions -->
     <property name="fileExtensions" value="java, properties, cfg, xml"/>
 
+    <!-- Enables suppressions, as defined in the file found at `suppressionsLocation`
+         in the checkstyle plugin configuration -->
+    <module name="SuppressionFilter">
+        <property name="file" value="${checkstyle.suppressions.file}"/>
+    </module>
+
     <!-- No tab characters ('\t') allowed in the source code -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
