@@ -9,4 +9,6 @@
   <suppress checks="JavadocVariable" files="src[/\\]test[/\\]java"/>
   <suppress checks="JavadocType" files="src[/\\]test[/\\]java"/>
   <suppress checks="JavadocStyleCheck" files="src[/\\]test[/\\]java"/>
+  <!-- Suppressions for generated source files -->
+  <suppress checks=".*" files="[/\\]target[/\\]" />
 </suppressions>
