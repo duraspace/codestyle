@@ -11,16 +11,20 @@ Checkstyle can be enabled in Java projects using Maven using the [Maven Checksty
     <executions>
         <execution>
             <id>verify-style</id>
-            <!-- Bind to process-classes so it runs after compile, but before package -->
-            <phase>process-classes</phase>
+            <!-- Bind to verify so it runs after package & unit tests, but before install -->
+            <phase>verify</phase>
             <goals>
                 <goal>check</goal>
             </goals>
         </execution>
     </executions>
     <configuration>
-        <configLocation>https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle.xml</configLocation>
-        <suppressionsLocation>https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle-suppressions.xml</suppressionsLocation>
+        <configLocation>
+          https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle.xml
+        </configLocation>
+        <suppressionsLocation>
+          https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle-suppressions.xml
+        </suppressionsLocation>
         <encoding>UTF-8</encoding>
         <consoleOutput>true</consoleOutput>
         <logViolationsToConsole>true</logViolationsToConsole>
