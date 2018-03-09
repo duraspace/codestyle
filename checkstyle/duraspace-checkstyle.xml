@@ -9,10 +9,11 @@ DuraSpace CodeStyle Requirements
   2. K&R style braces required. Braces required on all blocks.
   3. Do not use wildcard imports (e.g. import java.util.*). Duplicated or unused imports also not allowed.
   4. Javadocs should exist for all public classes and methods. (Methods rule is unenforced at this time.) Keep it short and to the point
-  5. Maximum line length is 120 characters (except for long URLs, packages or imports)
+  5. Maximum line length is 120 characters (except for long URLs, packages, imports, or method names)
   6. No trailing spaces allowed (except in comments)
-  7. Tokens should be surrounded by whitespace (see http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround)
-  8. Each source file must include our license header (validated separately by license-maven-plugin, see pom.xml)
+  7. No more than one blank line
+  8. Tokens should be surrounded by whitespace (see http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround)
+  9. Each source file must include our license header (validated separately by license-maven-plugin, see pom.xml)
 
 For more information on CheckStyle configurations below, see: http://checkstyle.sourceforge.net/checks.html
 -->
@@ -50,8 +51,8 @@ For more information on CheckStyle configurations below, see: http://checkstyle.
         <!-- Maximum line length is 120 characters -->
         <module name="LineLength">
             <property name="max" value="120"/>
-            <!-- Make exceptions for package names, imports and URLs -->
-            <property name="ignorePattern" value="^package.*|^import.*|http://|https://"/>
+            <!-- Make exceptions for package names, imports, URLs, and very long method names -->
+            <property name="ignorePattern" value="^package.*|^import.*|http://|https://|[ ]*\.?\S*"/>
         </module>
 
         <!-- Highlight any TODO or FIXME comments in info messages -->
@@ -125,6 +126,16 @@ For more information on CheckStyle configurations below, see: http://checkstyle.
         <!-- Validate whitespace around Generics (angle brackets) per typical conventions
              http://checkstyle.sourceforge.net/config_whitespace.html#GenericWhitespace -->
         <module name="GenericWhitespace"/>
+
+        <!-- ##### Blank line requirements ##### -->
+        <module name="EmptyLineSeparator">
+            <!-- Allow no more than one empty line -->
+            <property name="allowMultipleEmptyLines" value="false"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
+            <!-- Ensures empty lines are used to separate primary code sections -->
+            <property name="tokens" value="IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
+                                           STATIC_INIT, METHOD_DEF, CTOR_DEF" />
+        </module>
 
         <!-- ##### Requirements for "switch" statements ##### -->
         <!-- "switch" statements MUST have a "default" clause -->
