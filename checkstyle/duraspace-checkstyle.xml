@@ -51,8 +51,10 @@ For more information on CheckStyle configurations below, see: http://checkstyle.
         <!-- Maximum line length is 120 characters -->
         <module name="LineLength">
             <property name="max" value="120"/>
-            <!-- Make exceptions for package names, imports, URLs, and very long method names -->
-            <property name="ignorePattern" value="^package.*|^import.*|http://|https://|[ ]*\.?\S*"/>
+            <!-- Make exceptions for package names, imports, URLs, JavaDoc {@link} tags,
+                 and very long method names -->
+            <property name="ignorePattern"
+                      value="^package.*|^import.*|http://|https://|@link|[ ]*\.?\S*"/>
         </module>
 
         <!-- Highlight any TODO or FIXME comments in info messages -->
