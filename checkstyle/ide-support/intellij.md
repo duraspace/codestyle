@@ -67,15 +67,15 @@ If you want to dig further into configuration (primarily needed if you selected 
       * "for()" statement (also check "align when multiline")
       * "try-with-resources" (also check "align when multiline")
   * File → Settings → Editor → Code Style → Java → JavaDoc
-    * UNCHECK "Generate <p> on empty lines"
+    * UNCHECK "Generate `<p>` on empty lines"
     * Make sure "Keep empty lines" is checked
   * File → Settings → Editor → Code Style → Java → Imports
     * In the "Import Layout" section, ensure  the settings are in this order
       * "import static all other imports"
-      * <blank line>
+      * `<blank line>`
       * "import java.*"
       * "import javax.*"
-      * <blank line>
+      * `<blank line>`
       * "import all other imports"
 
 ### Fixing existing code
@@ -90,10 +90,10 @@ If you want to dig further into configuration (primarily needed if you selected 
   * Under *Filters* → Check *File Masks* and enter in "*.java, *.xml"  (to ensure bulk reformatting only applies to Java and XML files)
   * Click Run
   * Run Checkstyle against the module. There likely will still be a few failures to fix manually.
-```
-# Either run checkstyle alone
-mvn -U checkstyle:check
-# Or execute the entire build
-mvn clean install 
-```
+    ```shell
+    # Either run checkstyle alone
+    mvn -U checkstyle:check
+    # Or execute the entire build
+    mvn clean install 
+    ```
   * Fix any errors that are reported before you commit!
