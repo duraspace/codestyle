@@ -86,9 +86,7 @@
         <!-- Requirements for Javadocs for methods -->
         <module name="JavadocMethod">
             <!-- All public methods MUST HAVE Javadocs -->
-            <!-- <property name="scope" value="public"/> -->
-            <!-- TODO: Above rule has been disabled because of large amount of missing public method Javadocs -->
-            <property name="scope" value="nothing"/>
+            <property name="scope" value="public"/>
             <!-- Allow RuntimeExceptions to be undeclared -->
             <property name="allowUndeclaredRTE" value="true"/>
             <!-- Allow params, throws and return tags to be optional -->

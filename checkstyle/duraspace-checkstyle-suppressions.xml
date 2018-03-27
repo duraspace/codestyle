@@ -5,10 +5,13 @@
 <suppressions>
   <!-- Suppressions for Javadoc in Test classes -->
   <suppress checks="JavadocMethod" files="src[/\\]test[/\\]java"/>
-  <suppress checks="JavadocPackage" files="src[/\\]test[/\\]java"/>
-  <suppress checks="JavadocVariable" files="src[/\\]test[/\\]java"/>
   <suppress checks="JavadocType" files="src[/\\]test[/\\]java"/>
-  <suppress checks="JavadocStyleCheck" files="src[/\\]test[/\\]java"/>
+
   <!-- Suppressions for generated source files -->
   <suppress checks=".*" files="[/\\]target[/\\]" />
+
+  <!-- Disables Javadoc requirement for all public methods. This suppression
+       is not recommended, but may be needed (temporarily) to allow checkstyle
+       to be applied to existing codebases. -->
+  <suppress checks="JavadocMethod" files="src[/\\]main[/\\]java"/>
 </suppressions>
