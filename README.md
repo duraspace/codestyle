@@ -1,14 +1,16 @@
+# DuraSpace Code Style
+
+The purpose of this repository is to provide resources for maintaining consistent coding style. The resources in this repository are available for use by DuraSpace projects as well as any other individuals or projects interested in maintaining a coding style consistent with well established open source projects.
+
+[Checkstyle](#checkstyle) | [Code Style Guide](#code-style-guide) | [IDE Support](#ide-support) | [License](#license)
+
+## Checkstyle
+
 <p align="center">
   <a href="http://checkstyle.sourceforge.net"><img src="http://checkstyle.sourceforge.net/images/header-checkstyle-logo.png" alt="Checkstyle Logo"/></a>
 </p>
 
 [Checkstyle](https://github.com/checkstyle/checkstyle) is a development tool for Java, used to ensure that code standards are applied consistently.
-
-The checkstyle rules in this repository are available for use by DuraSpace projects as well as any other individuals or projects interested in maintaining a coding style consistent with well established open source projects.
-
-[Enabling Checkstyle](#enabling-checkstyle) | [Code Style Guide](#code-style-guide) | [IDE Support](#ide-support)
-
-## Enabling Checkstyle
 
 Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin). Add the following into the <build><plugins> section of your Maven POM.xml file:
 
@@ -30,10 +32,10 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
     </executions>
     <configuration>
         <configLocation>
-          https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle.xml
+          https://raw.githubusercontent.com/duraspace/codestyle/master/duraspace-checkstyle.xml
         </configLocation>
         <suppressionsLocation>
-          https://raw.githubusercontent.com/duraspace/resources/master/checkstyle/duraspace-checkstyle-suppressions.xml
+          https://raw.githubusercontent.com/duraspace/codestyle/master/duraspace-checkstyle-suppressions.xml
         </suppressionsLocation>
         <encoding>UTF-8</encoding>
         <consoleOutput>true</consoleOutput>
@@ -72,7 +74,7 @@ The following code guidelines are enforced by the checkstyle rules:
 5. Do not use wildcard imports (e.g. `import java.util.*`). Duplicated or unused imports are not allowed.
 6. Write Javadocs for public methods and classes. Keep it short and to the point.
    1. Javadoc `@author` tags are optional, but should refer to an individual's name or handle (e.g. GitHub username) when included
-7. Tokens should be surrounded by whitespace ([details here](http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround)) 
+7. Tokens should be surrounded by whitespace ([details here](http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround))
 8. Each line of code can only include one statement.  This also means each variable declaration must be on its own line, e.g.
     ```java
     // This is NOT valid. Three variables are declared on one line
@@ -83,7 +85,7 @@ The following code guidelines are enforced by the checkstyle rules:
     String second = "";
     String third = "";
     ```
-9. No empty "catch" blocks in try/catch.  A "catch" block must minimally include a comment as to why the catch is empty, e.g. 
+9. No empty "catch" blocks in try/catch.  A "catch" block must minimally include a comment as to why the catch is empty, e.g.
     ```java
     try {
       // some code ..
@@ -91,7 +93,7 @@ The following code guidelines are enforced by the checkstyle rules:
       // ignore, this exception is not important
     }
     ```   
-10. All "switch" statements must include a "default" clause.  Also, each clause in a switch must include a "break", "return", "throw", "continue", or a `// fall through` comment 
+10. All "switch" statements must include a "default" clause.  Also, each clause in a switch must include a "break", "return", "throw", "continue", or a `// fall through` comment
     ```java
     // This is NOT valid. Switch doesn't include a "default" and is missing a "break" in first "case"
     switch (myVal) {
@@ -146,3 +148,7 @@ Select an IDE from the list for more details on how to configure your IDE to use
 * [IntelliJ IDEA](ide-support/intellij.md)
 * [Eclipse](ide-support/eclipse.md)
 * [NetBeans](ide-support/netbeans.md)
+
+## License
+
+All resources in this repository are made available under the [Apache 2 license](https://www.apache.org/licenses/LICENSE-2.0).
