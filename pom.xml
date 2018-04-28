@@ -1,0 +1,198 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+  <groupId>org.duraspace</groupId>
+  <artifactId>codestyle</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>codestyle</name>
+  <description>A package that contains checkstyle rules for DuraSpace projects</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>2.6.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.2</version>
+          <configuration>
+            <debug>false</debug>
+            <source>1.7</source>
+            <target>1.7</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.5</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.1</version>
+          <configuration>
+            <!-- see http://jira.codehaus.org/browse/MRELEASE-424 -->
+            <mavenExecutorId>forked-path</mavenExecutorId>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.scm</groupId>
+              <artifactId>maven-scm-provider-gitexe</artifactId>
+              <version>1.8.1</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.7</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.3</version>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <versionRange>[1.0.0,)</versionRange>
+                    <goals>
+                      <goal>enforce</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute />
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <scm>
+    <connection>scm:git:git://github.com/duraspace/codestyle.git
+    </connection>
+    <developerConnection>scm:git:git@github.com:duraspace/codestyle.git
+    </developerConnection>
+    <url>https://github.com/duraspace/codestyle</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <prerequisites>
+    <maven>3.0.0</maven>
+  </prerequisites>
+
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <useAgent>true</useAgent>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <comments>Copyright (c) 2013 DuraSpace</comments>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>awoods</id>
+      <name>Andrew Woods</name>
+      <email>awoods @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
+    <developer>
+      <id>bbranan</id>
+      <name>Bill Branan</name>
+      <email>bbranan @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>
+    <developer>
+      <id>dbernstein</id>
+      <name>Danny Bernstein</name>
+      <email>dbernstein @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-8</timezone>
+    </developer>
+    <developer>
+      <id>tdonohue</id>
+      <name>Tim Donohue</name>
+      <email>tdonohue @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-6</timezone>
+    </developer>
+  </developers>
+</project>
