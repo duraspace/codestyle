@@ -31,12 +31,8 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
         </execution>
     </executions>
     <configuration>
-        <configLocation>
-          https://raw.githubusercontent.com/duraspace/codestyle/master/duraspace-checkstyle.xml
-        </configLocation>
-        <suppressionsLocation>
-          https://raw.githubusercontent.com/duraspace/codestyle/master/duraspace-checkstyle-suppressions.xml
-        </suppressionsLocation>
+        <configLocation>duraspace-checkstyle/checkstyle.xml</configLocation>
+        <suppressionsLocation>*your-checkstyle-suppression.xml*</suppressionsLocation>
         <encoding>UTF-8</encoding>
         <consoleOutput>true</consoleOutput>
         <logViolationsToConsole>true</logViolationsToConsole>
@@ -44,6 +40,17 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
         <includeTestSourceDirectory>true</includeTestSourceDirectory>
     </configuration>
     <dependencies>
+        <dependency>
+            <groupId>org.duraspace</groupId>
+            <artifactId>codestyle</artifactId>
+            <version>${duraspace-codestyle.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>*your-suppression-group*</groupId>
+            <artifactId>*your-suppression-artifact*</artifactId>
+            <version>*your-suppression-version*</version>
+        </dependency>
+
         <!-- Override dependencies to use latest version of checkstyle -->
         <dependency>
             <groupId>com.puppycrawl.tools</groupId>
