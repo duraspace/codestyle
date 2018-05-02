@@ -12,6 +12,37 @@
   <name>codestyle</name>
   <description>A package that contains checkstyle rules for DuraSpace projects</description>
 
+  <developers>
+    <developer>
+      <id>awoods</id>
+      <name>Andrew Woods</name>
+      <email>awoods @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+    </developer>
+    <developer>
+      <id>bbranan</id>
+      <name>Bill Branan</name>
+      <email>bbranan @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+    </developer>
+    <developer>
+      <id>dbernstein</id>
+      <name>Danny Bernstein</name>
+      <email>dbernstein @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+    </developer>
+    <developer>
+      <id>tdonohue</id>
+      <name>Tim Donohue</name>
+      <email>tdonohue @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+    </developer>
+  </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -145,54 +176,7 @@
     <license>
       <name>Apache License, Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-      <comments>Copyright (c) 2013 DuraSpace</comments>
     </license>
   </licenses>
 
-  <developers>
-    <developer>
-      <id>awoods</id>
-      <name>Andrew Woods</name>
-      <email>awoods @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>-7</timezone>
-    </developer>
-    <developer>
-      <id>bbranan</id>
-      <name>Bill Branan</name>
-      <email>bbranan @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>-5</timezone>
-    </developer>
-    <developer>
-      <id>dbernstein</id>
-      <name>Danny Bernstein</name>
-      <email>dbernstein @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>-8</timezone>
-    </developer>
-    <developer>
-      <id>tdonohue</id>
-      <name>Tim Donohue</name>
-      <email>tdonohue @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>-6</timezone>
-    </developer>
-  </developers>
 </project>
