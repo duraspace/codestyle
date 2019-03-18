@@ -48,7 +48,7 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
         <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>8.8</version>
+            <version>8.18</version>
         </dependency>
     </dependencies>
 </plugin>
