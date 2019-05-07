@@ -6,6 +6,8 @@
   <!-- Suppressions for Javadoc in Test classes -->
   <suppress checks="JavadocMethod" files="src[/\\]test[/\\]java"/>
   <suppress checks="JavadocType" files="src[/\\]test[/\\]java"/>
+  <suppress checks="FinalLocalVariable" files="src[/\\]test[/\\]java"/>
+  <suppress checks="FinalParameters" files="src[/\\]test[/\\]java"/>
 
   <!-- Suppressions for generated source files -->
   <suppress checks=".*" files="[/\\]target[/\\]" />
@@ -14,4 +16,6 @@
        is not recommended, but may be needed (temporarily) to allow checkstyle
        to be applied to existing codebases. -->
   <suppress checks="JavadocMethod" files="src[/\\]main[/\\]java"/>
+  <suppress checks="FinalLocalVariable" files="src[/\\]main[/\\]java"/>
+  <suppress checks="FinalParameters" files="src[/\\]main[/\\]java"/>
 </suppressions>
