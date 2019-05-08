@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.duraspace</groupId>
   <artifactId>codestyle</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>codestyle</name>
   <description>A package that contains checkstyle rules for DuraSpace projects</description>
@@ -135,6 +135,18 @@
     <url>https://github.com/duraspace/codestyle</url>
     <tag>HEAD</tag>
   </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Shapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <prerequisites>
     <maven>3.0.0</maven>
