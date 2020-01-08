@@ -45,7 +45,7 @@
             <!-- Make exceptions for package names, imports, URLs, JavaDoc {@link} tags,
                  and very long method names -->
             <property name="ignorePattern"
-                      value="^package.*|^import.*|http://|https://|@link|[ ]*\.?\S*"/>
+                      value="^package.*|^import.*|http://|https://|@link"/>
         </module>
 
         <!-- Highlight any TODO or FIXME comments in info messages -->
