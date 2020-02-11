@@ -19,7 +19,7 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-checkstyle-plugin</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <executions>
         <execution>
             <id>verify-style</id>
@@ -49,7 +49,7 @@ Checkstyle can be enabled in Java projects with Maven using the [Maven Checkstyl
         <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>8.18</version>
+            <version>8.29</version>
         </dependency>
     </dependencies>
 </plugin>
