@@ -16,30 +16,30 @@
     <developer>
       <id>awoods</id>
       <name>Andrew Woods</name>
-      <email>awoods @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <email>andrew.woods @ (domain of organization url)</email>
+      <organization>LYRASIS</organization>
+      <organizationUrl>https://lyrasis.org</organizationUrl>
     </developer>
     <developer>
       <id>bbranan</id>
       <name>Bill Branan</name>
-      <email>bbranan @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <email>bill.branan @ (domain of organization url)</email>
+      <organization>LYRASIS</organization>
+      <organizationUrl>https://lyrasis.org</organizationUrl>
     </developer>
     <developer>
       <id>dbernstein</id>
       <name>Danny Bernstein</name>
-      <email>dbernstein @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <email>daniel.bernstein @ (domain of organization url)</email>
+      <organization>LYRASIS</organization>
+      <organizationUrl>https://lyrasis.org</organizationUrl>
     </developer>
     <developer>
       <id>tdonohue</id>
       <name>Tim Donohue</name>
-      <email>tdonohue @ (domain of organization url)</email>
-      <organization>DuraSpace</organization>
-      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <email>tim.donohue @ (domain of organization url)</email>
+      <organization>LYRASIS</organization>
+      <organizationUrl>https://lyrasis.org</organizationUrl>
     </developer>
   </developers>
 
