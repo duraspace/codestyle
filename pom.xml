@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.duraspace</groupId>
   <artifactId>codestyle</artifactId>
-  <version>1.1.0-SNAPSHOT</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>codestyle</name>
   <description>A package that contains checkstyle rules for DuraSpace projects</description>
@@ -133,7 +133,7 @@
     <developerConnection>scm:git:git@github.com:duraspace/codestyle.git
     </developerConnection>
     <url>https://github.com/duraspace/codestyle</url>
-    <tag>HEAD</tag>
+    <tag>codestyle-1.1.0</tag>
   </scm>
 
   <distributionManagement>
